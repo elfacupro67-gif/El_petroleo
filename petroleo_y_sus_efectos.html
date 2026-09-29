@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El petróleo y sus efectos</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#eef6f3;color:#17332b}
+header{background:linear-gradient(135deg,#063b32,#0d6b59);color:white;text-align:center;padding:55px 20px}
+header h1{font-size:clamp(2rem,5vw,4rem);margin:0 0 12px} header p{font-size:1.15rem;margin:0 auto;max-width:750px}
+nav{position:sticky;top:0;background:#062d27;padding:12px;text-align:center;z-index:5}
+nav a{color:white;text-decoration:none;margin:0 12px;font-weight:bold}
+main{max-width:1100px;margin:auto;padding:30px 18px}
+.intro{background:white;border-radius:18px;padding:28px;box-shadow:0 5px 20px #0001;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;border-radius:18px;padding:24px;box-shadow:0 5px 18px #0001;border-top:6px solid #16866e}
+.card .icon{font-size:2.4rem}.card h2{margin:8px 0}.card p{line-height:1.6}
+.fact{margin-top:28px;background:#d7efe8;border-radius:18px;padding:24px}
+button{background:#0d6b59;color:white;border:0;padding:13px 18px;border-radius:10px;cursor:pointer;font-weight:bold}
+#extra{margin-top:16px;font-weight:bold}
+footer{text-align:center;padding:30px;background:#062d27;color:white;margin-top:35px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌍 El petróleo y sus efectos</h1>
+  <p>Una página educativa para conocer qué puede causar la extracción, transporte, uso y derrame de petróleo.</p>
+</header>
+<nav>
+  <a href="#agua">Agua</a><a href="#aire">Aire</a><a href="#suelo">Suelo</a><a href="#animales">Animales</a><a href="#clima">Clima</a>
+</nav>
+<main>
+<section class="intro">
+  <h2>¿Qué es el petróleo?</h2>
+  <p>El petróleo es un recurso fósil formado a partir de materia orgánica transformada durante millones de años. Se utiliza para producir combustibles y muchos productos industriales.</p>
+  <p>Su extracción y utilización pueden generar impactos ambientales, especialmente cuando ocurren derrames, emisiones o una gestión inadecuada de residuos.</p>
+</section>
+
+<section class="grid">
+<article class="card" id="agua"><div class="icon">💧</div><h2>Contaminación del agua</h2><p>Los derrames de petróleo pueden formar una capa sobre el agua y afectar la calidad del ecosistema. Esto puede perjudicar a organismos acuáticos y zonas costeras.</p></article>
+<article class="card" id="aire"><div class="icon">🌫️</div><h2>Contaminación del aire</h2><p>La extracción, procesamiento y quema de combustibles derivados del petróleo pueden liberar contaminantes atmosféricos y gases de efecto invernadero.</p></article>
+<article class="card" id="suelo"><div class="icon">🌱</div><h2>Daño al suelo</h2><p>Los derrames y residuos derivados de actividades petroleras pueden contaminar el suelo y afectar plantas y microorganismos.</p></article>
+<article class="card" id="animales"><div class="icon">🐦</div><h2>Afectación de animales</h2><p>El petróleo derramado puede cubrir plumas o pelaje y alterar hábitats. También puede afectar las fuentes de alimento de distintas especies.</p></article>
+<article class="card" id="clima"><div class="icon">🌡️</div><h2>Cambio climático</h2><p>La quema de combustibles fósiles libera dióxido de carbono, uno de los principales gases de efecto invernadero relacionados con el calentamiento global.</p></article>
+<article class="card"><div class="icon">🏭</div><h2>Impacto humano</h2><p>La contaminación relacionada con combustibles y actividades industriales puede afectar la calidad del aire y del entorno donde viven las personas.</p></article>
+</section>
+
+<section class="fact">
+<h2>💡 Aprende un poco más</h2>
+<p>Haz clic para mostrar un dato adicional sobre cómo reducir impactos ambientales.</p>
+<button onclick="mostrarDato()">Mostrar dato</button>
+<div id="extra"></div>
+</section>
+</main>
+<footer>Proyecto educativo • El petróleo y el medio ambiente</footer>
+<script>
+const datos=[
+"Reducir el consumo innecesario de combustibles ayuda a disminuir emisiones.",
+"El transporte y almacenamiento seguros son importantes para prevenir derrames.",
+"El reciclaje y el uso responsable de recursos pueden reducir la demanda de materias primas.",
+"Proteger humedales, costas y otros ecosistemas ayuda a conservar la biodiversidad."
+];
+let i=0;
+function mostrarDato(){document.getElementById("extra").textContent=datos[i%datos.length];i++;}
+</script>
+</body>
+</html>
